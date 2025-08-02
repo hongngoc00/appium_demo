@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-08-02T16:45:59.073055" rpa="false" schemaversion="5">
+<suite id="s1" name="Appium" source="C:\Users\admin\PycharmProjects\autotest\AndroidDemo\tests\appium.robot">
+<test id="s1-t1" name="Test send Message" line="17">
+<kw name="Open App Test" owner="common" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>automationName=${automation_name}</arg>
+<arg>platformName=${platform_name}</arg>
+<arg>platformVersion=${platform_version}</arg>
+<arg>deviceName=${device_name}</arg>
+<arg>udid=${udid}</arg>
+<arg>appPackage=${app_package}</arg>
+<arg>appActivity=${app_activity}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-08-02T16:45:59.208320" elapsed="8.297074"/>
+</kw>
+<status status="PASS" start="2025-08-02T16:45:59.207943" elapsed="8.298129"/>
+</kw>
+<kw name="Wait and click element" owner="common">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-08-02T16:46:12.252385" level="INFO">criteria is com.google.android.apps.messaging:id/continue_as_button
+criteria is com.google.android.apps.messaging:id/continue_as_button
+criteria is com.google.android.apps.messaging:id/continue_as_button</msg>
+<arg>${element}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-08-02T16:46:07.507037" elapsed="4.745855"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-08-02T16:46:12.255132" level="INFO">Clicking element 'id= com.google.android.apps.messaging:id/continue_as_button'.</msg>
+<msg time="2025-08-02T16:46:12.596551" level="INFO">criteria is com.google.android.apps.messaging:id/continue_as_button</msg>
+<arg>${element}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-08-02T16:46:12.253241" elapsed="0.343534"/>
+</kw>
+<arg>${continue_app_button}</arg>
+<status status="PASS" start="2025-08-02T16:46:07.506536" elapsed="5.090423"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-08-02T16:46:15.267268" level="INFO">criteria is com.google.android.apps.messaging:id/messages_title
+criteria is com.google.android.apps.messaging:id/messages_title</msg>
+<arg>${message_title}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-08-02T16:46:12.597596" elapsed="2.669735"/>
+</kw>
+<kw name="Wait and click element" owner="common">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-08-02T16:46:15.323047" level="INFO">criteria is com.google.android.apps.messaging:id/conversation_name</msg>
+<arg>${element}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-08-02T16:46:15.267903" elapsed="0.055226"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-08-02T16:46:15.324567" level="INFO">Clicking element 'id= com.google.android.apps.messaging:id/conversation_name'.</msg>
+<msg time="2025-08-02T16:46:15.434826" level="INFO">criteria is com.google.android.apps.messaging:id/conversation_name</msg>
+<arg>${element}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-08-02T16:46:15.323276" elapsed="0.111662"/>
+</kw>
+<arg>${user_chat}</arg>
+<status status="PASS" start="2025-08-02T16:46:15.267666" elapsed="0.167386"/>
+</kw>
+<kw name="Wait and input text" owner="common">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-08-02T16:46:17.618882" level="INFO">criteria is com.google.android.apps.messaging:id/compose_message_text</msg>
+<arg>${element}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-08-02T16:46:15.436545" elapsed="2.182410"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-08-02T16:46:17.619926" level="INFO">Typing text 'Hello Ngoc!' into text field 'id=com.google.android.apps.messaging:id/compose_message_text'</msg>
+<msg time="2025-08-02T16:46:18.279159" level="INFO">criteria is com.google.android.apps.messaging:id/compose_message_text</msg>
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-08-02T16:46:17.619065" elapsed="0.660172"/>
+</kw>
+<arg>${message_textbox}</arg>
+<arg>${input_message}</arg>
+<status status="PASS" start="2025-08-02T16:46:15.435875" elapsed="2.843432"/>
+</kw>
+<kw name="Wait and click element" owner="common">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-08-02T16:46:19.509071" level="INFO">xpath criteria: //android.view.View[@resource-id="Compose:Draft:Send"]/android.widget.Button</msg>
+<arg>${element}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-08-02T16:46:18.280286" elapsed="1.228857"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-08-02T16:46:19.510097" level="INFO">Clicking element 'xpath=//android.view.View[@resource-id="Compose:Draft:Send"]/android.widget.Button'.</msg>
+<msg time="2025-08-02T16:46:20.552965" level="INFO">xpath criteria: //android.view.View[@resource-id="Compose:Draft:Send"]/android.widget.Button</msg>
+<arg>${element}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-08-02T16:46:19.509263" elapsed="1.043829"/>
+</kw>
+<arg>${send_message_button}</arg>
+<status status="PASS" start="2025-08-02T16:46:18.280033" elapsed="2.273175"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-08-02T16:46:21.158915" level="INFO">xpath criteria: //android.view.View[@resource-id="message_list"]/android.view.View[1]/android.view.View[1]/android.view.View</msg>
+<arg>${send_message_success}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-08-02T16:46:20.553510" elapsed="0.605561"/>
+</kw>
+<kw name="Close App Test" owner="common" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-08-02T16:46:21.159850" elapsed="0.832587"/>
+</kw>
+<status status="PASS" start="2025-08-02T16:46:21.159638" elapsed="0.832990"/>
+</kw>
+<status status="PASS" start="2025-08-02T16:45:59.207385" elapsed="22.785505"/>
+</test>
+<status status="PASS" start="2025-08-02T16:45:59.074014" elapsed="22.919936"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Appium" id="s1" pass="1" fail="0" skip="0">Appium</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
