@@ -17,7 +17,11 @@ ${send_message_success}    xpath=//android.view.View[@resource-id="message_list"
 Test send Message
     Wait And Click Element    ${continue_app_button}
     Wait Until Element Is Visible    ${message_title}    timeout=10s
+
     Wait And Click Element    ${user_chat}
+
     Wait And Input Text    ${message_textbox}    ${input_message}
+
     Wait And Click Element    ${send_message_button}
+
     Wait Until Element Is Visible    ${send_message_success}
